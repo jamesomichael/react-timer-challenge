@@ -10,7 +10,10 @@ const Player = () => {
 			<p>
 				<input ref={playerNameRef} type="text" />
 				<button
-					onClick={() => setPlayerName(playerNameRef.current.value)}
+					onClick={() => {
+						setPlayerName(playerNameRef.current.value);
+						playerNameRef.current.value = '';
+					}}
 				>
 					Set Name
 				</button>
